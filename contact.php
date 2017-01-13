@@ -74,7 +74,7 @@ if (!$errName && !$errEmail && !$errMessage) {
 					<ul>
 						<li class="active"><a href="index.html">Homepage</a></li>
 						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="groups.html">Associated Groups</a></li>
+						<li><a href="#">Our Team</a></li>
 						<li><a href="#">Join Us</a></li>
 						<li><a href="contact.php">Contact Us</a></li>
 					</ul>
