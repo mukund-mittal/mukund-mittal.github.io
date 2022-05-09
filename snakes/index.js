@@ -116,10 +116,10 @@ class player{
         if(playerpos==100){
             pb.disabled=true;
             cb.disabled=true;
-            p3.innerHTML="Player Won!!! Reset?"
+            p3.innerHTML="Player 1 Won!!! Reset?"
         }
-        //cb.addEventListener("click",coclick);//Activate when 2 human players are playing
-        coclick();
+        cb.addEventListener("click",coclick);//Activate when 2 human players are playing
+        //coclick();//Activate when a Human and a computer is playing
     }
 
     rb.addEventListener("click",reset)
@@ -184,7 +184,7 @@ class player{
         if(computerpos==100){
             cb.disabled=true;
             pb.disabled=true;
-            p3.innerHTML="Computer Won :( Reset?"
+            p3.innerHTML="Player 2 Won!!! Reset?"
         }
     }
   
