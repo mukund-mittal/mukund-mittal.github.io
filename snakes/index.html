@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>  <!--had to set every position to absolute to enable z-index-->
+            <canvas id="canvas1" style="position: absolute; left: 0; top: 0; z-index: 0;">
+                <img id="board" src="board.jpg"><!--html will not be able
+                to draw image if it is inside canvas, as it is being
+                controlled by javascript-->
+                </img>
+            </canvas><!--This canvas will be for static board background-->
+            <canvas id="canvas2" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <!--This canvas will be for players redrawing. As whole canvas needs to be cleared
+            for image redrawings. Shifted board image to another canvas so it need not be 
+            redrawn again, consuming resources-->
+            <!--Could not add button in canvas-->
+            <div class="row" id="nav" style="position:absolute;left:0;top: 93%;width:100%;z-index: 100;">
+                <div class="column" id="col1">
+                    <button type="button" id="player">Player</button>
+                    <p id="text1" style="display:inline; margin-left: 50px;">Roll the Dice</p>
+                </div>
+                <div class="column" id="col2">
+                    <button type="button" id="reset">Reset Game</button>
+                    <p id="text3" style="display:inline; margin-left: 50px;">Reset?</p>
+                </div>
+                <div class="column" id="col3">
+                    <button type="button" id="computer">Computer</button>
+                    <p id="text2" style="display:inline; margin-left: 50px;">Roll the Dice</p>
+                </div>
+            </div>
+        
+        
+        <script src="./index.js"></script>
+    </body>
+</html>
