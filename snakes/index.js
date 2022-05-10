@@ -2,7 +2,7 @@ const canvas1 = document.getElementById("canvas2"); // selects 'canvas1' element
 //changing javascript canvas will change html canvas too
 const canvas2 = document.getElementById("canvas1");
 margin=innerHeight*0.1;
-canvas1.width = canvas2.width =innerWidth;
+canvas1.width = canvas2.width =innerWidth-margin;
 canvas1.height = canvas2.height =innerHeight-margin;//Decreasing canvas height so that it does not cover
 //buttons below and render them incapable of being clicked
 c=canvas1.getContext('2d');
@@ -10,7 +10,7 @@ d=canvas2.getContext('2d');
 const img=document.getElementById("board");
 //img.width = canvas.width-100;//modifies img in html
 //img.height = canvas.height-100;//modifies img in html
-d.drawImage(img,0,0,canvas1.width-margin,canvas1.height);
+d.drawImage(img,0,0,canvas1.width,canvas1.height);
 //c.drawImage(board.jpg,0,0)
 class player{
     constructor(posx,posy,radius,color){
@@ -27,7 +27,7 @@ class player{
         c.fill();
     }
 }
-    xbox=(canvas1.width-margin)/10;
+    xbox=(canvas1.width)/10;
     ybox=(canvas1.height)/10;
   x=xbox*0.5;
   y=ybox*9.5;
