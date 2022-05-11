@@ -25,6 +25,9 @@ class player{
         d.closePath();
         d.fillStyle=this.color;
         d.fill();
+        d.lineWidth=1;
+        d.strokeStyle = '#000000'; 
+        d.stroke();
     }
 }
 xbox=(canvas1.width)/15;
@@ -389,6 +392,10 @@ function bcheck(){
           }
       }
       d.clearRect(p.posx-(xbox/2), p.posy-(ybox/2), xbox, ybox);
+
+        tempx=p.posx;
+        tempy=p.posy;
+
         if(ypos[pos]<95){
         p.posx=axboard[ypos[pos]];
         p.posy=ayboard[ypos[pos]];
@@ -402,6 +409,141 @@ function bcheck(){
         gp[0].draw();gp[1].draw();gp[2].draw();gp[3].draw();
         rp[0].draw();rp[1].draw();rp[2].draw();rp[3].draw();
         bp[0].draw();bp[1].draw();bp[2].draw();bp[3].draw();
+
+        //Redrawing token in previous position and new position so they stack up according to their size
+
+        //counter=0;
+        /*for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+                //yp[i].radius=Math.min(xbox,ybox)/2;//No need. It will make matters worse
+            }
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }*///Wrong loop. First print all yellow tokens is loop. Then green, red and blue. Wrong due to 409-411(Yellow drawn first, then green, red, blue)
+
+        /*tempx=p.posx;
+        tempy=p.posy;
+
+        counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+                //yp[i].radius=Math.min(xbox,ybox)/2;//No need. It will make matters worse
+            }
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }*/
+
+        counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }        
+
+        tempx=p.posx;
+        tempy=p.posy;
+
+        counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }
+
         if(ypos[pos]==1||ypos[pos]==14||ypos[pos]==27||ypos[pos]==40||ypos[pos]==-1||ypos[pos]==100){
             ysafe[pos]=1;
         }
@@ -510,6 +652,10 @@ function bcheck(){
         }
     }
     d.clearRect(p.posx-(xbox/2), p.posy-(ybox/2), xbox, ybox);
+
+    tempx=p.posx;
+    tempy=p.posy;
+
     if(gpos[pos]<95){
         p.posx=axboard[gpos[pos]];
         p.posy=ayboard[gpos[pos]];
@@ -523,6 +669,78 @@ function bcheck(){
       gp[0].draw();gp[1].draw();gp[2].draw();gp[3].draw();
       rp[0].draw();rp[1].draw();rp[2].draw();rp[3].draw();
       bp[0].draw();bp[1].draw();bp[2].draw();bp[3].draw();
+
+      counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }        
+
+        tempx=p.posx;
+        tempy=p.posy;
+
+        counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }
+
       if(gpos[pos]==1||gpos[pos]==14||gpos[pos]==27||gpos[pos]==40||gpos[pos]==-1||gpos[pos]==100){
           gsafe[pos]=1;
       }
@@ -629,6 +847,10 @@ function rpmove(p,pos){
         }
     }
     d.clearRect(p.posx-(xbox/2), p.posy-(ybox/2), xbox, ybox);
+
+    tempx=p.posx;
+    tempy=p.posy;
+
     if(rpos[pos]<95){
         p.posx=axboard[rpos[pos]];
         p.posy=ayboard[rpos[pos]];
@@ -642,6 +864,78 @@ function rpmove(p,pos){
       gp[0].draw();gp[1].draw();gp[2].draw();gp[3].draw();
       rp[0].draw();rp[1].draw();rp[2].draw();rp[3].draw();
       bp[0].draw();bp[1].draw();bp[2].draw();bp[3].draw();
+
+      counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }        
+
+        tempx=p.posx;
+        tempy=p.posy;
+
+        counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }
+
       if(rpos[pos]==1||rpos[pos]==14||rpos[pos]==27||rpos[pos]==40||rpos[pos]==-1||rpos[pos]==100){
           rsafe[pos]=1;
       }
@@ -748,6 +1042,10 @@ function bpmove(p,pos){
         }
     }
     d.clearRect(p.posx-(xbox/2), p.posy-(ybox/2), xbox, ybox);
+
+    tempx=p.posx;
+    tempy=p.posy;
+
     if(bpos[pos]<95){
         p.posx=axboard[bpos[pos]];
         p.posy=ayboard[bpos[pos]];
@@ -761,6 +1059,78 @@ function bpmove(p,pos){
       gp[0].draw();gp[1].draw();gp[2].draw();gp[3].draw();
       rp[0].draw();rp[1].draw();rp[2].draw();rp[3].draw();
       bp[0].draw();bp[1].draw();bp[2].draw();bp[3].draw();
+
+      counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }        
+
+        tempx=p.posx;
+        tempy=p.posy;
+
+        counter=0;
+        for(i=0;i<4;i++){
+            if(yp[i].posx==tempx &&yp[i].posy==tempy){
+                yp[i].radius=Math.min(xbox,ybox)/2;
+                yp[i].radius-=3*counter;
+                counter++;
+                yp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(gp[i].posx==tempx &&gp[i].posy==tempy){
+                gp[i].radius=Math.min(xbox,ybox)/2;
+                gp[i].radius-=3*counter;
+                counter++;
+                gp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(rp[i].posx==tempx &&rp[i].posy==tempy){
+                rp[i].radius=Math.min(xbox,ybox)/2;
+                rp[i].radius-=3*counter;
+                counter++;
+                rp[i].draw();
+            }
+        }
+        for(i=0;i<4;i++){
+            if(bp[i].posx==tempx &&bp[i].posy==tempy){
+                bp[i].radius=Math.min(xbox,ybox)/2;
+                bp[i].radius-=3*counter;
+                counter++;
+                bp[i].draw();
+            }
+        }
+
       if(bpos[pos]==1||bpos[pos]==14||bpos[pos]==27||bpos[pos]==40||bpos[pos]==-1||bpos[pos]==100){
           bsafe[pos]=1;
       }
