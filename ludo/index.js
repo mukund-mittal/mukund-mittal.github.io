@@ -276,6 +276,16 @@ function checkyellow(event) {
         canvas2.removeEventListener("click",checkyellow);
         p2.disabled=false;
       }
+      for(i=0;i<4;i++){
+          if(ypos[i]!=-1&&ypos[i]<95){
+              for(j=0;j<4;j++){
+                  if((ypos[i]+dice)%52==ypos[j]){
+                      yrolldice();
+                      return;
+                  }
+              }
+          }
+      }
   }
 
   function gcheck(){
@@ -290,6 +300,16 @@ function checkyellow(event) {
       canvas2.removeEventListener("click",checkgreen);
       p3.disabled=false;
       
+    }
+    for(i=0;i<4;i++){
+        if(gpos[i]!=-1&&gpos[i]<95){
+            for(j=0;j<4;j++){
+                if((gpos[i]+dice)%52==gpos[j]){
+                    grolldice();
+                    return;
+                }
+            }
+        }
     }
 }
 
@@ -306,6 +326,16 @@ function rcheck(){
       p4.disabled=false;
       
     }
+    for(i=0;i<4;i++){
+        if(rpos[i]!=-1&&rpos[i]<95){
+            for(j=0;j<4;j++){
+                if((rpos[i]+dice)%52==rpos[j]){
+                    rrolldice();
+                    return;
+                }
+            }
+        }
+    }
 }
 
 function bcheck(){
@@ -320,6 +350,16 @@ function bcheck(){
       canvas2.removeEventListener("click",checkblue);
       p1.disabled=false;
       
+    }
+    for(i=0;i<4;i++){
+        if(bpos[i]!=-1&&bpos[i]<95){
+            for(j=0;j<4;j++){
+                if((bpos[i]+dice)%52==bpos[j]){
+                    brolldice();
+                    return;
+                }
+            }
+        }
     }
 }
 
