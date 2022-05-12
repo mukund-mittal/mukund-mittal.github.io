@@ -1,8 +1,9 @@
 const canvas1 = document.getElementById("canvas1"); // selects 'canvas1' element in html 'document' and gives it to javascript canvas
 //changing javascript canvas will change html canvas too
 const canvas2 = document.getElementById("canvas2");
+const container = document.getElementById("container");
 margin=innerHeight*0.2;
-canvas1.width = canvas2.width = canvas1.height = canvas2.height = Math.min(innerHeight-margin,innerWidth-margin);
+container.style.height=canvas1.width = canvas2.width = canvas1.height = canvas2.height = Math.min(innerHeight-margin,innerWidth-margin);
 //canvas1.height = canvas2.height =innerHeight-margin;//Decreasing canvas height so that it does not cover
 //buttons below and render them incapable of being clicked
 canvas1.style.left=(innerWidth-canvas1.width)/2;//Set canvas to middle of screen
