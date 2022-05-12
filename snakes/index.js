@@ -2,9 +2,10 @@ const canvas1 = document.getElementById("canvas2"); // selects 'canvas1' element
 //changing javascript canvas will change html canvas too
 const canvas2 = document.getElementById("canvas1");
 margin=innerHeight*0.1;
-canvas1.width = canvas2.width =innerWidth-margin;
-canvas1.height = canvas2.height =innerHeight-margin;//Decreasing canvas height so that it does not cover
+container.style.height=canvas1.width = canvas2.width =canvas1.height = canvas2.height =Math.min(innerWidth-margin,innerHeight-margin);
+//Decreasing canvas height so that it does not cover
 //buttons below and render them incapable of being clicked
+canvas1.style.left=canvas2.style.left=(innerWidth-canvas1.width)/2;
 c=canvas1.getContext('2d');
 d=canvas2.getContext('2d');
 const img=document.getElementById("board");
@@ -34,7 +35,7 @@ class player{
    // c.save();
   const p=new player(x,y,Math.min(xbox,ybox)/2,'blue');
   //p.draw();
-  const comp=new player(x,y,Math.min(xbox,ybox)/4,'orange');
+  const comp=new player(x,y,Math.min(xbox,ybox)/2,'green');
   //comp.draw();
   pb=document.getElementById("player");
   rb=document.getElementById("reset");
@@ -43,8 +44,6 @@ class player{
   p2=document.getElementById("text2");
   p3=document.getElementById("text3");
   row=document.getElementById("nav");
-    pturn=1;
-    cturn=0;
     ax=[];//canvas position in x direction correcponding to box no.
     ay=[];//canvas position in y direction correcponding to box no.
     au=[]
@@ -87,11 +86,26 @@ class player{
     function p1click(){
         dice=Math.floor((Math.random() * 6) + 1);
         p1.innerHTML="Dice Value: "+dice;
+        if(playerpos==0){
+            if(dice!=6){
+                cb.disabled=false;
+                pb.disabled=true;
+                p3.innerHTML="Need to wait for dice to roll 6. Passing to Player 2";
+                return;
+            }
+        }
         playerpos+=dice;
-        if(playerpos<=100){
+        if(playerpos>0&&playerpos<=100){
             playerpos+=au[playerpos-1];
             p.posx=ax[playerpos-1];
             p.posy=ay[playerpos-1];
+            if(playerpos==computerpos){
+                computerpos=0;
+                p3.innerHTML="Player 1 sent Player 2 to home. Player 1 turn again";
+                c.clearRect(0, 0, canvas2.width, canvas2.height);
+                p.draw();
+                return;
+            }
             c.clearRect(0, 0, canvas2.width, canvas2.height);
             //const p=new player(x+(xbox*dice),y,Math.min(xbox,ybox)/2,'blue');
             p.draw();
@@ -108,18 +122,26 @@ class player{
         }
         else{
             playerpos-=dice;
+            p3.innerHTML="Player cannot pass 100. Passing to Player 2";
+            cb.disabled=false;
+            pb.disabled=true;
+            return;
         }
-        pturn=0;
-        cturn=1;
-        cb.disabled=false;
-        pb.disabled=true;
         if(playerpos==100){
             pb.disabled=true;
             cb.disabled=true;
-            p3.innerHTML="Player 1 Won!!! Reset?"
+            p3.innerHTML="Player 1 Won!!! Reset?";
+            return;
         }
-        cb.addEventListener("click",coclick);//Activate when 2 human players are playing
-        //coclick();//Activate when a Human and a computer is playing
+        if(dice==6){
+            p3.innerHTML="Player 1 turn again";
+            return;
+        }
+        cb.disabled=false;
+        pb.disabled=true;
+        p3.innerHTML="Player 2 turn";
+        //cb.addEventListener("click",coclick);//Activate when 2 human players are playing
+        //coclick();
     }
 
     rb.addEventListener("click",reset)
@@ -130,8 +152,6 @@ class player{
         comp.posx=0;
         p.posy=0;
         comp.posy=0;
-        pturn=1;
-        cturn=0;
         playerpos=0;
         computerpos=0;
         cb.disabled=true;
@@ -157,15 +177,31 @@ class player{
         cb.disabled=false;//Not Working. Working only when called from function
         cb.addEventListener("click",coclick);
     }*/
+    cb.addEventListener("click",coclick);
     computerpos=0;
     function coclick(){
         dice=Math.floor((Math.random() * 6) + 1);
         p2.innerHTML="Dice Value: "+dice;
+        if(computerpos==0){
+            if(dice!=6){
+                pb.disabled=false;
+                cb.disabled=true;
+                p3.innerHTML="Need to wait for dice to roll 6. Passing to Player 1";
+                return;
+            }
+        }
         computerpos+=dice;
-        if(computerpos<=100){
+        if(computerpos>0&&computerpos<=100){
             computerpos+=au[computerpos-1];
             comp.posx=ax[computerpos-1];
             comp.posy=ay[computerpos-1];
+            if(playerpos==computerpos){
+                playerpos=0;
+                p3.innerHTML="Player 2 sent Player 1 to home. Player 2 turn again";
+                c.clearRect(0, 0, canvas2.width, canvas2.height);
+                comp.draw();
+                return;
+            }
             c.clearRect(0, 0, canvas2.width, canvas2.height);
             //const p=new player(x+(xbox*dice),y,Math.min(xbox,ybox)/2,'blue');
             if(playerpos!=0){
@@ -176,16 +212,24 @@ class player{
         }
         else{
             computerpos-=dice;
+            p3.innerHTML="Player cannot pass 100. Passing to Player 1";
+            pb.disabled=false;
+            cb.disabled=true;
+            return;
         }
-        pturn=1;
-        cturn=0;
-        pb.disabled=false;
-        cb.disabled=true;
         if(computerpos==100){
             cb.disabled=true;
             pb.disabled=true;
-            p3.innerHTML="Player 2 Won!!! Reset?"
+            p3.innerHTML="Player 2 Won!!! Reset?";
+            return;
         }
+        if(dice==6){
+            p3.innerHTML="Player 2 turn again";
+            return;
+        }
+        pb.disabled=false;
+        cb.disabled=true;
+        p3.innerHTML="Player 1 turn";
     }
   
 
