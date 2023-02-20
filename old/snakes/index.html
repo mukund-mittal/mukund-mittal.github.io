@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>  <!--had to set every position to absolute to enable z-index-->
+        <div class="container" id="container" style="">
+            <canvas id="canvas1" style="position: absolute; left: 0; top: 0; z-index: 0;">
+                <img id="board" src="board.jpg"><!--html will not be able
+                to draw image if it is inside canvas, as it is being
+                controlled by javascript-->
+                </img>
+            </canvas><!--This canvas will be for static board background-->
+            <canvas id="canvas2" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <!--This canvas will be for players redrawing. As whole canvas needs to be cleared
+            for image redrawings. Shifted board image to another canvas so it need not be 
+            redrawn again, consuming resources-->
+            <!--Could not add button in canvas-->
+        </div>
+            <div class="row" id="nav" style="left:0;width:100%;z-index: 100;text-align: right;">
+                <div class="column" id="col1">
+                    <button type="button" id="player" style="float:left;">Player 1</button>
+                    <p id="text1" style="display:inline; margin-left: 20px;float: left; margin-top: 0;">Roll the Dice</p>
+                </div>
+                <div class="column" id="col2">
+                    <button type="button" id="reset" style="float:left;">Reset Game</button>
+                    <p id="text3" style="display:inline; margin-left: 20px;float: left; margin-top: 0;">Reset?</p>
+                </div>
+                <div class="column" id="col3">
+                    <button type="button" id="computer" style="float:left;">Player 2</button>
+                    <p id="text2" style="display:inline; margin-left: 20px;float: left; margin-top: 0;">Roll the Dice</p>
+                </div>
+            </div>
+        
+        
+        <script src="./index.js"></script>
+    </body>
+</html>

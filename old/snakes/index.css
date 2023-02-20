@@ -1,0 +1,33 @@
+/* Create three equal columns that floats next to each other */
+#col1 {
+    float: left;
+    display: inline;
+    /*margin-top: 20px;*/
+    width: 33.33%;
+    /*padding: 10px;*/
+     /* height: 300px;Should be removed. Only for demonstration */
+  }
+  #col2 {
+    float: left;
+    display: inline;
+    /*margin-top: 20px;*/
+    width: 33.33%;
+    /*padding: 10px;*/
+     /* height: 300px;Should be removed. Only for demonstration */
+  }
+  #col3 {
+    float: left;
+    display: inline;
+    /*margin-top: 20px;*/
+    width: 33.33%;
+    margin-right: 0%;
+    /*padding: 10px;*/
+     /* height: 300px;Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  /*.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }*/
