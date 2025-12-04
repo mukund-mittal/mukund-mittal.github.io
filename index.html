@@ -1,506 +1,559 @@
 <!DOCTYPE html>
-<!-- upto 2 directory depth-->
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mukund Mittal</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    </noscript>
-    <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
-        }
-      </style>
-    </noscript>
-  </head>
-  <body id="top">
-    <header class="bg-light">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
-        <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#">Resume Page</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-2">
-              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="#services">Interests</a></li>
-              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-              <!--<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>-->
-              <li class="nav-item"><a class="nav-link" href="#experience">Projects</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mukund Mittal | Resume</title>
+  <meta name="description"
+        content="Resume of Mukund Mittal, Assistant Manager (ATC) at Airports Authority of India, IIT Kanpur Mechanical Engineering graduate and future business leader." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-main">Mukund</span><span class="logo-accent">Mittal</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <button class="nav-close" id="nav-close" aria-label="Close navigation">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#interests" class="nav-link">Interests</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
-    </header>
-    <div class="page-content">
-      <div id="content">
-<header>
-  <div class="cover bg-light">
-    <div class="container px-3">
-      <div class="row">
-        <div class="col-lg-6 p-2"><img class="img-fluid" src="images/illustrations/hello3.svg" alt="hello"/></div>
-        <div class="col-lg-6">
-          <div class="mt-5">
-            <p class="lead text-uppercase mb-1">Hello!</p>
-            <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="50">I’m Mukund Mittal</h1>
-            <p class="lead fw-normal mt-3" data-aos="fade-up" data-aos-delay="100">Air Traffic Control Officer at Airports Authority of India</p>
-            <div class="social-nav" data-aos="fade-up" data-aos-delay="200">
-              <nav role="navigation">
-                <ul class="nav justify-content-left">
-                  <li class="nav-item"><a class="nav-link" href="https://t.me/mukund_mittal" title="Telegram"><i class="bi bi-telegram"></i><span class="menu-title sr-only">Telegram</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.m.me/mittal.mukund" title="Messenger"><i class="bi bi-messenger"></i><span class="menu-title sr-only">Messenger</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mukundmittal.in/" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/mukund-mittal/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="mailto:mail@mukundmittal.in" title="E-mail"><i class="bi bi-envelope-open"></i><span class="menu-title sr-only">E-mail</span></a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="mt-3" data-aos="fade-up" data-aos-delay="200"><a class="btn btn-primary shadow-sm mt-1 hover-effect" href="#contact">Get In Touch <i class="fas fa-arrow-right"></i></a></div>
+
+      <a href="#contact" class="btn btn-outline nav-cta">Get in touch</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text hero-reveal">
+          <p class="eyebrow">Professional Profile</p>
+          <h1 class="hero-title">
+            I’m <span class="highlight">Mukund Mittal</span>
+          </h1>
+          <p class="hero-subtitle">
+            Assistant Manager (Air Traffic Control), Airports Authority of India
+          </p>
+
+          <p class="hero-body">
+            IIT Kanpur Mechanical Engineering graduate, with experience in high-stakes
+            operational roles, a strong interest in public policy, and a deep inclination
+            towards structured problem solving and continuous learning.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Replace href with your actual CV link -->
+            <a href="Mukund_Mittal_Resume.pdf" class="btn" target="_blank" rel="noopener">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              Download Resume
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              View Projects
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://t.me/mukund_mittal" target="_blank" rel="noopener" aria-label="Telegram">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="https://www.m.me/mittal.mukund" target="_blank" rel="noopener" aria-label="Messenger">
+              <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+            <a href="https://www.instagram.com/mukundmittal.in/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mukund-mittal/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:contact@mukundmittal.in" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrapper hero-reveal">
+          <div class="hero-photo-border">
+            <img src="assets/img/Mukund Photo CAT 2025.jpg"
+                 alt="Portrait of Mukund Mittal" class="hero-photo" />
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-title">Current Role</span>
+            <span class="hero-badge-body">Asst. Manager, ATC (AAI)</span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="wave-bg"></div>
-</header>
-<div class="section pt-4 px-3 px-lg-4" id="about">
-  <div class="container-narrow">
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="h4 my-2">Something About Me.</h2>
-        <p> 
-          I love Indo-Western Classical Fusion as a music genre. I sing and play guitar as a hobby. I am a UPSC aspirant, doing my preparation while working at Airports Authority of India.
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section section-alt">
+      <div class="container grid-2">
+        <div class="reveal-on-scroll" data-delay="0">
+          <h2 class="section-title">Something About Me</h2>
+          <p class="section-intro">
+            I enjoy bringing structure and calm to complex environments—whether in an ATC
+            tower, in front of markets and policy debates, or while playing Indo-Western
+            classical fusion on guitar. Alongside my work in Air Traffic Control, I have
+            spent significant time preparing for the UPSC Civil Services Examination.
+          </p>
+        </div>
+
+        <div class="info-grid reveal-on-scroll" data-delay="0.08">
+          <div class="info-item">
+            <span class="info-label">Age</span>
+            <span class="info-value">28</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Email</span>
+            <a href="mailto:contact@mukundmittal.in" class="info-value">
+              contact@mukundmittal.in
+            </a>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Skype</span>
+            <span class="info-value">mukundmittal</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Location</span>
+            <span class="info-value">Mumbai, India</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Graduation</span>
+            <span class="info-value">Indian Institute of Technology, Kanpur</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Program</span>
+            <span class="info-value">B.Tech., Mechanical Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <h2 class="section-title">Career & Education Timeline</h2>
+        <p class="section-intro">
+          A concise view of my journey across engineering, civil services preparation,
+          and air traffic control.
         </p>
-        <div class="row mt-3">
-          <div class="col-sm-2">
-            <div class="pb-1">Age:</div>
+
+        <div class="timeline">
+          <!-- Item 1: AAI -->
+          <article class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <i class="fa-solid fa-tower-broadcast"></i>
+                </div>
+                <div>
+                  <p class="timeline-date">Jan 2023 – Present</p>
+                  <h3 class="timeline-title">Assistant Manager (Air Traffic Control)</h3>
+                  <p class="timeline-location">Airports Authority of India · Mumbai</p>
+                </div>
+              </div>
+              <p class="timeline-body">
+                Managing air traffic in a high-stakes, time-critical environment, coordinating
+                with multiple stakeholders, and ensuring safety and efficiency of operations.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 2: UPSC -->
+          <article class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div>
+                  <p class="timeline-date">Jun 2018 – May 2021</p>
+                  <h3 class="timeline-title">UPSC Civil Services Preparation</h3>
+                  <p class="timeline-location">Full-time preparation</p>
+                </div>
+              </div>
+              <p class="timeline-body">
+                Deep engagement with Indian polity, economy, international relations and ethics,
+                building a structured understanding of governance and public policy.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 3: IITK -->
+          <article class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <p class="timeline-date">Jul 2014 – May 2018</p>
+                  <h3 class="timeline-title">B.Tech., Mechanical Engineering</h3>
+                  <p class="timeline-location">Indian Institute of Technology, Kanpur</p>
+                </div>
+              </div>
+              <p class="timeline-body">
+                Built a strong foundation in engineering principles, design and analysis, and
+                contributed to hands-on projects including FSAE motorsports and mechanical systems.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 4: Foundation -->
+          <article class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="timeline-icon">
+                  <i class="fa-solid fa-music"></i>
+                </div>
+                <div>
+                  <p class="timeline-date">Earlier</p>
+                  <h3 class="timeline-title">Early Interest in Science & Music</h3>
+                  <p class="timeline-location">School years</p>
+                </div>
+              </div>
+              <p class="timeline-body">
+                Developed a parallel interest in analytical problem solving and performance
+                arts, especially singing and guitar—both of which continue to shape how I think and work.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERESTS ================= -->
+    <section id="interests" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Interests</h2>
+        <p class="section-intro">
+          Themes and activities that keep me engaged beyond core work.
+        </p>
+
+        <div class="card-grid">
+          <article class="card reveal-on-scroll" data-delay="0">
+            <div class="card-icon">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <h3 class="card-title">Music</h3>
+            <p class="card-body">
+              Singing and playing guitar, with a special love for Indo-Western classical fusion.
+            </p>
+          </article>
+
+          <article class="card reveal-on-scroll" data-delay="0.05">
+            <div class="card-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="card-title">Financial Markets</h3>
+            <p class="card-body">
+              Following markets, macro trends, and understanding businesses and long-term value creation.
+            </p>
+          </article>
+
+          <article class="card reveal-on-scroll" data-delay="0.1">
+            <div class="card-icon">
+              <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <h3 class="card-title">Current Affairs</h3>
+            <p class="card-body">
+              Regularly tracking national and international developments with an eye on policy and impact.
+            </p>
+          </article>
+
+          <article class="card reveal-on-scroll" data-delay="0.15">
+            <div class="card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="card-title">Programming</h3>
+            <p class="card-body">
+              Building small web projects and browser games, and experimenting with clean, functional code.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-intro">
+          Technical skills that complement my analytical and decision-making abilities.
+        </p>
+
+        <div class="skills-grid">
+          <div class="skills-column">
+            <div class="skill">
+              <div class="skill-header">
+                <span>HTML5</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-header">
+                <span>CSS3</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-header">
+                <span>Linux</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-header">
+                <span>Python</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 70%"></div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">28</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Email:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">contact@mukundmittal.in</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Skype:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">mukundmittal</div>
-          </div>
-          <!--<div class="col-sm-2">
-            <div class="pb-1">Phone:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">+0718-111-0011</div>
-          </div>-->
-          <div class="col-sm-2">
-            <div class="pb-1">Address:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">Lucknow, India</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Graduation:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">Indian Institute of Technology, Kanpur</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="pb-1">Program:</div>
-          </div>
-          <div class="col-sm-10">
-            <div class="pb-1 fw-bolder">B.Tech., Mechanical Engineering</div>
+
+          <div class="skills-column">
+            <div class="skill">
+              <div class="skill-header">
+                <span>C++</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-header">
+                <span>JavaScript</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-header">
+                <span>MySQL</span>
+                <span>60%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 60%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-header">
+                <span>Java (Core)</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--level: 70%"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100"><img class="avatar img-fluid mt-2" src="images/mukund page photo resize.jpg" width="400" height="400" alt="Walter Patterson"/></div>
-    </div>
-  </div>
-</div>
-<div class="section px-3 px-lg-4 pt-5" id="services">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Interests</h2>
-    </div>
-    <!--<div class="text-center">
-      <p class="mx-auto mb-3" style="max-width:600px"> I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.</p>
-    </div>-->
-    <div class="row py-3">
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="images/services/music-svgrepo-com.svg" width="96" height="96" alt="web design"/>
-        <div class="h5">Music</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="images/services/increasing-stocks-graphic-of-bars-svgrepo-com.svg" width="96" height="96" alt="graphic design"/>
-        <div class="h5">Financial Market</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300"><img class="mb-2" src="images/services/book-svgrepo-com.svg" width="96" height="96" alt="ui-ux"/>
-        <div class="h5">Current Affairs</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="400"><img class="mb-2" src="images/services/programming-svgrepo-com.svg" width="96" height="96" alt="app development"/>
-        <div class="h5">Programming</div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section px-3 px-lg-4 pt-5" id="skills">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Skills</h2>
-    </div>
-    <div class="text-center">
-      <p class="mx-auto mb-3" style="max-width:600px">I am a quick learner and specialize in multitude of skills required for Web Application Development and Software Design</p>
-    </div>
-    <div class="bg-light p-3">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">HTML5</span><span>80%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">CSS3</span><span>80%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200" data-aos-anchor=".skills-section" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Linux</span><span>70%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Python</span><span>70%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5 offset-md-2">
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">C++</span><span>75%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Javascript</span><span>70%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">MySQL</span><span>60%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Java(Core)</span><span>70%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">
+          Selected academic and personal projects across engineering and programming.
+        </p>
+
+        <div class="card-grid">
+          <article class="card card-project reveal-on-scroll" data-delay="0">
+            <div class="card-tag">Institute Project</div>
+            <h3 class="card-title">FSAE, IITK Motorsports</h3>
+            <p class="card-meta">IIT Kanpur</p>
+            <p class="card-body">
+              Designed the suspension and steering systems of an F1 prototype participating
+              in Formula Student events in India and abroad.
+            </p>
+            <p class="card-body">
+              Represented IIT Kanpur in Formula SAE Combustion events and contributed
+              to a car that secured 9th rank overall and was the lightest in the event.
+            </p>
+          </article>
+
+          <article class="card card-project reveal-on-scroll" data-delay="0.05">
+            <div class="card-tag">JavaScript Project</div>
+            <h3 class="card-title">Browser Game Development</h3>
+            <p class="card-meta">Personal Project</p>
+            <p class="card-body">
+              Built two browser games (Ludo and Snakes &amp; Ladders) using vanilla JavaScript
+              without external libraries.
+            </p>
+            <p class="card-body">
+              Implemented responsive layouts for a smooth experience on both desktop and mobile screens.
+            </p>
+          </article>
+
+          <article class="card card-project reveal-on-scroll" data-delay="0.1">
+            <div class="card-tag">Course Project</div>
+            <h3 class="card-title">4 Wheel Differential Drive</h3>
+            <p class="card-meta">Manufacturing Processes-II (TA 202)</p>
+            <p class="card-body">
+              Designed and manufactured a working prototype of a 4-wheel differential drive
+              mechanism under the guidance of Dr. Niraj Sinha.
+            </p>
+          </article>
+
+          <article class="card card-project reveal-on-scroll" data-delay="0.15">
+            <div class="card-tag">Course Project</div>
+            <h3 class="card-title">Mechanical Watch Design</h3>
+            <p class="card-meta">Engineering Design &amp; Graphics (ME 252)</p>
+            <p class="card-body">
+              Created a 3D working CAD model of a mechanical watch and performed tolerance
+              analysis of critical parts.
+            </p>
+            <p class="card-body">
+              Explored how parameters such as Young’s modulus and dimensions influence watch accuracy.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<!--<div class="section px-2 px-lg-4 pt-5" id="portfolio">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Portfolio </h2>
-    </div>
-    <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-      <div class="grid-sizer"></div>
-      <div class="grid-item"><a href="https://dribbble.com">
-          <figure class="portfolio-item"><img src="images/portfolio/1-small.png" data-bp="images/portfolio/1.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Web Design</h4>
-              <div>Dribbble.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://github.com">
-          <figure class="portfolio-item"><img src="images/portfolio/2-small.png" data-bp="images/portfolio/2.jpg" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Web Development</h4>
-              <div>GitHub.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://soundcloud.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/3-small.png" data-bp="images/portfolio/3.jpg" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Audio Mixing</h4>
-              <div>Soundcloud.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.adobe.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/4-small.png" data-bp="images/portfolio/4.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Video Editing</h4>
-              <div>Adobe After Effects</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.adobe.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/5-small.png" data-bp="images/portfolio/5.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Photography</h4>
-              <div>Adobe Photoshop</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.android.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/6-small.png" data-bp="images/portfolio/6.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Development</h4>
-              <div>Android</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://flutter.dev/">
-          <figure class="portfolio-item"><img src="images/portfolio/7-small.png" data-bp="images/portfolio/7.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Design</h4>
-              <div>Flutter</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://flutter.dev/">
-          <figure class="portfolio-item"><img src="images/portfolio/8-small.png" data-bp="images/portfolio/8.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Development</h4>
-              <div>Flutter</div>
-            </figcaption>
-          </figure></a></div>
-    </div>
-  </div>
-</div>-->
-<div class="section px-3 px-lg-4 pt-5" id="experience">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Projects</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="100">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">FSAE, IITK MOTORSPORTS</h3>
-                <div class="text-muted text-small">IIT KANPUR | Institute Project <small>(Nov, 2014 - Feb, 2016)</small></div>
-              </div><img src="images/services/f1-car-svgrepo-com.svg" width="48" height="48" alt="ui-ux"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Designing the Suspension and Steering systems of F1 prototype taking part in FS India and other International events. Represented IIT
-            Kanpur in the recent Formula SAE Combustion events held in India</p>
-            <p>Secured 9th rank overall in the event. We designed the lightest car in the event.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="300">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">BROWSER GAME DEVELOPMENT</h3>
-                <div class="text-muted text-small">Javascript Project <small>(April - May, 2022)</small></div>
-              </div><img src="images/services/javascript-svgrepo-com.svg" width="48" height="48" alt="app development"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Made 2 browser games i.e. Ludo and Snakes/Ladders based on Javascript language, without using any external 
-              libraries. The games have a responsive design and can run on mobile as well as desktop/laptop screen.</p>
-            <!--<p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>-->
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="200">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">4 WHEEL DIFFERENTIAL DRIVE</h3>
-                <div class="text-muted text-small">Course Project <small>(Aug - Nov, 2015)</small></div>
-              </div><img src="images/services/gear-svgrepo-com.svg" width="48" height="48" alt="web design"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Designed and manufactured a working prototype of a 4 Wheel Differential Drive mechanism using the manufacturing techniques
-              learned in the course ‘Manufacturing Processes-II (TA 202)’ under the guidance of Dr. Niraj Sinha.</p>
-            <!--<p>The model secured the title of 3rd best project in the batch.</p>-->
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="400">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">MECHANICAL WATCH DESIGN</h3>
-                <div class="text-muted text-small">Course Project <small>(Jan-Apr, 2016)</small></div>
-              </div><img src="images/services/wristwatch-svgrepo-com.svg" width="48" height="48" alt="full stack"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Made a 3D working CAD model of a Mechanical Watch and rendered it for the presentation purposes for the course “Engineering
-            Design & Graphics (ME 252)” under the guidance of Prof. Nachiketa Tiwari.</p>
-            <p>Calculated the tolerance of different watch parts used and its dependency on different parameters such as young’s modulus of
-            materials, dimensions, etc. Also calculated the effect of the calculated tolerance on the accuracy of the watch.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--<div class="section px-3 px-lg-4 pt-5" id="testimonials">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Client Testimonials</h2>
-    </div>
-    <div class="row"> 
-      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Aiyana</div>
-            <div class="text-small">CEO / Web Design Company</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client1.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Alexander</div>
-            <div class="text-small">CEO / Web Design Company</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client2.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="200">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter is a great co-worker and problem solver. He is quick to extend his helping hand and makes a good team player.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Ariya</div>
-            <div class="text-small">Web Developer</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client3.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter is a great co-worker and problem solver. He is quick to extend his helping hand and makes a good team player.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Braiden</div>
-            <div class="text-small">Web Designer</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client4.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>-->
-<div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Contact Me</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="bg-light my-2 p-3 pt-2"><form action="https://formspree.io/f/xwkywodz"
-    method="POST">
-    <div class="form-group my-2">
-      <label for="name" class="form-label fw-bolder">Name</label>
-      <input class="form-control" type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group my-2">
-      <label for="email" class="form-label fw-bolder">Email</label>
-      <input class="form-control" type="email" id="email" name="_replyto" required>
-    </div>
-  <div class="form-group my-2">
-    <label for="message" class="form-label fw-bolder">Message</label>
-    <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4" required></textarea>
-  </div>
-  <button class="btn btn-primary mt-2" type="submit">Send</button>
-</form>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
-        <div class="mt-3 px-1">
-          <div class="h5">Happy to serve you in any way possible</div>
-          <p>Drop me a message using the contact form. </p>
-          <p>Or get in touch using my email or skype.</p>
-          <p>See you!</p>
-        </div>
-        <div class="mt-53 px-1">
-          <div class="row"> 
-            <div class="col-sm-2">
-              <div class="pb-1">Email:</div>
-            </div>
-            <div class="col-sm-10">
-              <div class="pb-1 fw-bolder">contact@mukundmittal.in</div>
-            </div>
-            <div class="col-sm-2">
-              <div class="pb-1">Skype:</div>
-            </div>
-            <div class="col-sm-10">
-              <div class="pb-1 fw-bolder">mukundmittal</div>
-            </div>
-            <!--<div class="col-sm-2">
-              <div class="pb-1">Phone:</div>
-            </div>
-            <div class="col-sm-10">
-              <div class="pb-1 fw-bolder">+0718-111-0011</div>
-            </div>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<footer class="pt-4 pb-4 text-center bg-light">
-  <div class="container">
-    <div class="my-3">
-      <div class="h4">Mukund Mittal</div>
-      <p>Assistant Manager, Airports Authority of India</p>
-      <div class="social-nav">
-        <nav role="navigation">
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="https://t.me/mukund_mittal" title="Telegram"><i class="bi bi-telegram"></i><span class="menu-title sr-only">Telegram</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.m.me/mittal.mukund" title="Messenger"><i class="bi bi-messenger"></i><span class="menu-title sr-only">Messenger</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mukundmittal.in/" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/mukund-mittal/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="mailto:mail@mukundmittal.in" title="E-mail"><i class="bi bi-envelope-open"></i><span class="menu-title sr-only">E-mail</span></a></li>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="reveal-on-scroll" data-delay="0">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-intro">
+            Happy to connect for opportunities, collaborations, or conversations around
+            aviation, policy, engineering, and business.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:contact@mukundmittal.in">contact@mukundmittal.in</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-skype"></i>
+              <span>mukundmittal</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Mumbai, India</span>
+            </li>
           </ul>
-        </nav>
+
+          <p class="contact-note">
+            Or reach out via any of the social links mentioned above.
+          </p>
+        </div>
+
+        <div class="reveal-on-scroll" data-delay="0.05">
+          <!-- Formspree integration -->
+          <form class="contact-form"
+                action="https://formspree.io/f/xwkywodz"
+                method="POST">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"
+                        placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="New message from mukundmittal.in" />
+
+            <button type="submit" class="btn btn-full">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-name">Mukund Mittal</p>
+        <p class="footer-role">Assistant Manager, Airports Authority of India</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-copy">
+          © <span id="year"></span> Mukund Mittal. All rights reserved.
+        </p>
       </div>
     </div>
-    <div class="text-small text-secondary">
-      <div class="mb-1">&copy; Super Folio. All rights reserved.</div>
-      <div>
-        <!-- Make sure to buy a license for the template before removing the line below. Buy license on https://templateflip.com/ -->Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
-    </div>
-  </div>
-</footer></div>
-    </div>
-    <div id="scrolltop"><a class="btn btn-secondary" href="#top"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
-    <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
-    <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
-    <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
-    <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
-    <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-    <script src="./scripts/aos.min.js?ver=1.2.0"></script>
-    <script src="./scripts/main.js?ver=1.2.0"></script>
-  </body>
+  </footer>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
 </html>
